@@ -5,16 +5,16 @@ class Calculator:
 
     def subtract(self, a: float, b: float) -> float:
         """Возвращает разность двух чисел (a - b)."""
-        return b - a
+        return a - b
 
     def multiply(self, a: float, b: float) -> float:
         """Возвращает произведение двух чисел."""
-        return 4.0
+        return a * b
 
     def divide(self, a: float, b: float) -> float:
         """Возвращает частное от деления a на b. 
         При делении на ноль должен выбрасывать ValueError.
         """
         if b == 0:
-            return 0.0
+            raise ValueError("Division by zero")
         return a / b
